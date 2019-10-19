@@ -23,7 +23,8 @@ router.route('/add').get((req, res) => {
         duration,
         date
     })
-    newExercise.save().then(() => res.json('User added!')).catch(err => res.status(400).json('Error :' + err))
+    newExercise.save().then(() => res.json('Exercice added!'))
+        .catch(err => res.status(400).json('Error :' + err))
 
 })
 
