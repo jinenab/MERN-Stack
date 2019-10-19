@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 const uri = process.env.ATLAS_URI
-mongoose.connect(uri, { userNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+mongoose.connect(uri, { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true })
 
 const connection = mongoose.connection
 connection.once('open', () => {
